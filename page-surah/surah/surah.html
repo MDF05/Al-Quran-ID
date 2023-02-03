@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="book of al-Quran,buku al-Quran online al-Quran surah al-Quran ebook">
+
+    <link rel="icon" href="../../Al-Quran/my logo/SGN_12_26_2022_1672039804363.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/surah.css">
+
+    <!-- google font icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <title>Surah</title>
+</head>
+
+
+<body class="bg-dark">
+
+
+    <nav class="daftar-surah-nav" id="daftar-surah-nav">
+        <div class="row">
+            <div class="col border-style">
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid home-page p-lg-2 p-0 container-surah">
+
+    </div>
+
+    <div id="settingDrag" draggable="true">
+        <span class="material-symbols-outlined gear-setting setting-melayang-color" title="double click">
+            ads_click
+        </span>
+        <span class="material-symbols-outlined d-none arrow-scroll bawah setting-melayang-color" data-panah="bawah">
+            keyboard_double_arrow_down
+        </span>
+        <span class="material-symbols-outlined d-none arrow-scroll muncul-pengaturan setting-melayang-color"
+            data-panah="pengaturan">
+            settings
+        </span>
+        <span class="material-symbols-outlined d-none arrow-scroll atas setting-melayang-color" data-panah="atas">
+            keyboard_double_arrow_up
+        </span>
+        <span class="material-symbols-outlined d-none arrow-scroll kiri setting-melayang-color" data-panah="kiri">
+            keyboard_double_arrow_left
+        </span>
+        <span class="material-symbols-outlined d-none arrow-scroll kanan setting-melayang-color" data-panah="kanan">
+            keyboard_double_arrow_right
+        </span>
+    </div>
+
+    <div class="pengaturan-container" id="container-pengaturan">
+        <div class="text-end">
+            <button type="button" class="btn btn-danger close-pengaturan" title="close pengaturan">X</button>
+        </div>
+        <div class="header-setting text-center fw-bold text-warning">
+            <h5>Setting</h5>
+        </div>
+        <div class="sub-setting pt-2 ps-2">
+            <div class="text-warning">
+                <h6 class="judul-setting"><span class="text-light">⇧</span>List Semua Surah</h6>
+            </div>
+            <div class="isi-setting d-none">
+                <div class="value-setting ps-3">
+                    <div class="pt-1">
+                        <label for="background-judul">background</label>
+                        <input type="color" id="background-judul" data-ubahStyle="background"
+                            data-targetClass="daftar-surah-nav" class="setting-style" value="#808080"
+                            data-storagestyle="backgroundListSurah">
+                    </div>
+                    <div class="pt-1">
+                        <label for="background-j-active">backrnd active</label>
+                        <input type="color" id="background-j-active" data-targetClass="ini-urutan"
+                            class="setting-style active-style active-bg" data-ubahStyle="background" value="#808080"
+                            data-storagestyle="bgJudulActive">
+                    </div>
+                    <div class="pt-1">
+                        <label for="color-judul">color</label>
+                        <input type="color" id="color-judul" data-ubahStyle="color" data-targetClass="daftar-surah-nav"
+                            class="setting-style" value="#ffffff" data-storagestyle="colorListSurah">
+                    </div>
+                    <div class="pt-1">
+                        <label for="judul-color-active">color active</label>
+                        <input type="color" id="judul-color-active" data-ubahStyle="color"
+                            data-targetClass="play-surah-dava" class="setting-style active-style active-color"
+                            data-storagestyle="j-color-active">
+                    </div>
+                    <div class="size-font">
+                        <label for="size-judul">size</label>
+                        <input type="number" id="sizheader" name="size-font" data-targetClass="daftar-surah-nav"
+                            class="setting-style" data-ubahStyle="fontSize" min="0" value="16" max="40"
+                            data-storagestyle="sizeListSurah">
+                        <span class="ps-1">px</span>
+                    </div>
+                    <div class="pt-1">
+                        <label for="color-border">border</label>
+                        <input type="color" id="color-border" data-targetClass="ini-urutan" data-ubahStyle="borderColor"
+                            class="setting-style" data-storagestyle="borderListSurah">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-setting pt-2 ps-2">
+            <div class="text-warning">
+                <h6 class="judul-setting"><span class="text-light">⇧</span>Text Judul/Header</h6>
+            </div>
+            <div class="isi-setting d-none">
+                <div class="value-setting ps-3">
+                    <div class="pt-1">
+                        <label for="color-header">color</label>
+                        <input type="color" id="color-header" value="#ffffFF" data-ubahStyle="color"
+                            class="setting-style" data-targetClass="judul-surah" data-storagestyle="colorHeader">
+                    </div>
+                    <div class="size-font">
+                        <label for="size-header">size</label>
+                        <input type="number" id="size-header" name="size-font" data-targetClass="judul-surah"
+                            class="setting-style" data-ubahStyle="fontSize" value="18" data-storagestyle="sizeHeader">
+                        <span class="ps-1">px</span>
+                    </div>
+                    <div class="pt-1">
+                        <label for="background-header">background</label>
+                        <input type="color" id="background-header" data-targetClass="judul-surah" class="setting-style"
+                            data-ubahStyle="background" value="#0D6EFD" data-storagestyle="backgroundHeader">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-setting pt-2 ps-2">
+            <div class="text-warning">
+                <h6 class="judul-setting"><span class="text-light">⇧</span>Text Ayat/Arab</h6>
+            </div>
+            <div class="isi-setting d-none">
+                <div class="value-setting ps-3">
+                    <div class="pt-1">
+                        <label for="color-arab">color</label>
+                        <input type="color" id="color-arab" data-ubahStyle="color" data-targetClass="color-ayah"
+                            class="setting-style" data-storagestyle="colorAyatArab">
+                    </div>
+                    <div class="size-font">
+                        <label for="size-arab">size</label>
+                        <input type="number" id="size-arab" name="size-font" data-targetClass="color-ayah"
+                            class="setting-style" data-ubahStyle="fontSize" min="0" value="38" max="200"
+                            data-storagestyle="sizeAyatArab">
+                        <span class="ps-1">px</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-setting pt-2 ps-2">
+            <div class="text-warning">
+                <h6 class="judul-setting"><span class="text-light">⇧</span>Nomor Ayat/Arab</h6>
+            </div>
+            <div class="isi-setting d-none">
+                <div class="value-setting ps-3">
+                    <div class="pt-1">
+                        <label for="number-arab">color</label>
+                        <input type="color" id="number-arab" data-ubahStyle="color" data-targetClass="urutan-ayat-surah"
+                            class="setting-style" data-storagestyle="colorNumberArab">
+                    </div>
+                    <div class="pt-1">
+                        <label for="backgroundAyat">background</label>
+                        <input type="color" id="backgroundAyat" data-targetClass="urutan-ayat-surah"
+                            class="setting-style" data-ubahStyle="background" value="#808080"
+                            data-storagestyle="backgroundNumber">
+                    </div>
+                    <div class=" size-font">
+                        <label for="size-number-arab">size</label>
+                        <input type="number" id="size-number-arab" name="size-font" data-targetClass="urutan-ayat-surah"
+                            class="setting-style" data-ubahStyle="fontSize" min="0" value="25" max="200"
+                            data-storagestyle="sizeNumber">
+                        <span class="ps-1">px</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-setting pt-2 ps-2">
+            <div class="text-warning">
+                <h6 class="judul-setting"><span class="text-light">⇧</span>Text Ayat/Indonesia</h6>
+            </div>
+            <div class="isi-setting d-none">
+                <div class="value-setting ps-3">
+                    <select name="text-ayatIndo" id="text-ayatIndo" data-ubahStyle="display"
+                        data-targetClass="read-indonesia" class="setting-style" data-storagestyle="displayAyatIndo">
+                        <option value="none">sembunyi</option>
+                        <option value="inherit">tampilkan</option>
+                    </select>
+                    <div class="pt-1">
+                        <label for="color-ayatIndo">color</label>
+                        <input type="color" id="color-ayatIndo" data-ubahStyle="color" data-targetClass="read-indonesia"
+                            class="setting-style" data-storagestyle="colorAyatIndo" value="#ff0000">
+
+                    </div>
+                    <div class="size-font">
+                        <label for="size-ayatIndo">size</label>
+                        <input type="number" id="size-ayatIndo" name="size-font" data-targetClass="read-indonesia"
+                            value="16" class="setting-style" data-ubahStyle="fontSize" data-storagestyle="sizeAyatIndo">
+                        <span class="ps-1">px</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-setting pt-2 ps-2">
+            <div class="text-warning">
+                <h6 class="judul-setting"><span class="text-light">⇧</span>Text Terjemahan/Arti</h6>
+            </div>
+            <div class="isi-setting d-none">
+                <div class="value-setting ps-3">
+                    <select name="text-terjemahan" id="text-terjemahan" data-targetClass="arti-indonesia"
+                        class="setting-style" data-storagestyle="displayAyatArti" data-ubahStyle="display">
+                        <option value="inherit">tampilkan</option>
+                        <option value="none">sembunyi</option>
+                    </select>
+                    <div class="pt-1">
+                        <label for="color-terjemahan">color</label>
+                        <input type="color" id="color-terjemahan" data-ubahStyle="color"
+                            data-targetClass="arti-indonesia" class="setting-style" value="#0D6EFD"
+                            data-storagestyle="colorAyatArti">
+
+                    </div>
+                    <div class="size-font">
+                        <label for="size-terjemahan">size</label>
+                        <input type="number" id="size-terjemahan" name="size-font" data-targetClass="arti-indonesia"
+                            class="setting-style" data-ubahStyle="fontSize" value="16" data-storagestyle="sizeAyatArti">
+                        <span class="ps-1">px</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-setting pt-2 ps-2">
+            <div class="text-warning">
+                <h6 class="judul-setting"><span class="text-light">⇧</span>Nomor button aksi(sudut)</h6>
+            </div>
+            <div class="isi-setting d-none">
+                <div class="value-setting ps-3">
+                    <div class="pt-1">
+                        <label for="number-indo">color</label>
+                        <input type="color" id="number-indo" data-ubahStyle="color"
+                            data-targetClass="aksi-tambahan-ayat" class="setting-style"
+                            data-storagestyle="colorNumberIndo">
+                    </div>
+                    <div class="pt-1">
+                        <label for="number-indo">background</label>
+                        <input type="color" id="number-indo" data-targetClass="aksi-tambahan-ayat" class="setting-style"
+                            data-ubahStyle="background" value="#ffffff" data-storagestyle="backgroundNumberIndo">
+                    </div>
+                    <div class="size-font">
+                        <label for="size-number-indo">size</label>
+                        <input type="number" id="size-number-indo" name="size-font"
+                            data-targetClass="aksi-tambahan-ayat" class="setting-style" data-ubahStyle="fontSize"
+                            min="0" value="14" max="100" data-storagestyle="sizeNumberIndo">
+                        <span class="ps-1">px</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-setting pt-2 ps-2">
+            <div class="text-warning">
+                <h6 class="judul-setting"><span class="text-light">⇧</span>Play Button Ayat(sudut)</h6>
+            </div>
+            <div class="isi-setting d-none">
+                <div class="value-setting ps-3">
+                    <div class="pt-1">
+                        <label for="play-button">color</label>
+                        <input type="color" id="play-button" data-ubahStyle="color" data-targetClass="play-surah-dava"
+                            class="setting-style" data-storagestyle="playButtonColor">
+                    </div>
+                    <div class="pt-1">
+                        <label for="play-button-active">color active</label>
+                        <input type="color" id="play-button-active" data-ubahStyle="color"
+                            data-targetClass="play-surah-dava" class="setting-style active-style active-color"
+                            data-storagestyle="playActive">
+                    </div>
+                    <div class="pt-1">
+                        <label for="backgroundplay">background</label>
+                        <input type="color" id="backgroundplay" data-targetClass="play-surah-dava" class="setting-style"
+                            data-ubahStyle="background" value="#808080" data-storagestyle="backgroundPlayButton">
+                    </div>
+                    <div class="pt-1">
+                        <label for="play-button-active">backrnd active</label>
+                        <input type="color" id="backgroundplay" data-targetClass="play-surah-dava"
+                            class="setting-style active-style active-bg" data-ubahStyle="background" value="#808080"
+                            data-storagestyle="playBgActive">
+                    </div>
+                    <div class=" size-font">
+                        <label for="size-number-play">size</label>
+                        <input type="number" id="size-number-play" name="size-font" data-targetClass="play-surah-dava"
+                            class="setting-style" data-ubahStyle="fontSize" min="0" value="25" max="200"
+                            data-storagestyle="sizePLayButton">
+                        <span class="ps-1">px</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-setting pt-2 ps-2">
+            <div class="text-warning">
+                <h6 class="judul-setting"><span class="text-light">⇧</span>Background Ayat<h6>
+            </div>
+            <div class="isi-setting d-none">
+                <div class="value-setting ps-3">
+                    <div class="pt-1">
+                        <label for="background-body">body</label>
+                        <input type="color" id="background-body" data-targetClass="ayat-setting-style"
+                            data-ubahStyle="background" class="setting-style" value="#ffffff"
+                            data-storagestyle="backgroundAyat">
+                    </div>
+                    <div class="pt-1">
+                        <label for="border-ayatBody">border</label>
+                        <input type="color" id="border-ayatBody" data-targetClass="ayat-setting-style"
+                            data-ubahStyle="borderColor" class="setting-style" value="#000000"
+                            data-storagestyle="borderAyat">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-setting pt-2 ps-2">
+            <div class="text-warning">
+                <h6 class="judul-setting"><span class="text-light">⇧</span>Audio Control</h6>
+            </div>
+            <div class="isi-setting d-none">
+                <div class="value-setting ps-3">
+                    <select name="audio-control" id="audio-control" data-ubahStyle="display"
+                        data-targetClass="play-audio-template" class="setting-style" data-storagestyle="displayAudio">
+                        <option value="inherit">tampilkan</option>
+                        <option value="none">sembunyi</option>
+                    </select>
+                    <div class="pt-1">
+                        <label for="backgruound-audio">background</label>
+                        <input type="color" id="backgruound-audio" data-ubahStyle="background"
+                            data-targetClass="play-audio-template" class="setting-style" value="#808080"
+                            data-storagestyle="backgroundAudio">
+                    </div>
+                    <div class="pt-1">
+                        <label for="color-audio">color</label>
+                        <input type="color" id="color-audio" data-ubahStyle="color"
+                            data-targetClass="play-audio-template" class="setting-style" data-storagestyle="colorAudio">
+                    </div>
+                    <div class="size-font">
+                        <label for="size-audio">size</label>
+                        <input type="number" id="size-audio" name="size-font" data-targetClass="play-audio-template"
+                            class="setting-style" data-ubahStyle="fontSize" value="18" max="40"
+                            data-storagestyle="sizeAudio">
+                        <span class="ps-1">px</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-setting pt-2 ps-2">
+            <div class="text-warning">
+                <h6 class="judul-setting"><span class="text-light">⇧</span>Tombol Drag Melayang</h6>
+            </div>
+            <div class="isi-setting d-none">
+                <div class="value-setting ps-3">
+                    <select name="drag-button" id="drag-button" data-targetClass="setting-melayang-color"
+                        class="setting-style" data-storagestyle="displayDrag" data-ubahStyle="display">
+                        <option value="inherit">tampilkan</option>
+                        <option value="none">sembunyi</option>
+                    </select>
+                    <div class="pt-1">
+                        <label for="background-drag">background</label>
+                        <input type="color" id="background-drag" data-ubahStyle="background"
+                            data-targetClass="setting-melayang-color" class="setting-style" value="#808080"
+                            data-storagestyle="backgroundDrag">
+                    </div>
+                    <div class="pt-1">
+                        <label for="color-drag">color</label>
+                        <input type="color" id="color-drag" data-ubahStyle="color"
+                            data-targetClass="setting-melayang-color" class="setting-style"
+                            data-storagestyle="colorDrag">
+                    </div>
+                    <div class="size-font">
+                        <label for="size-audio">size</label>
+                        <input type="number" id="size-audio" name="size-font" data-targetClass="setting-melayang-color"
+                            class="setting-style" data-ubahStyle="fontSize" value="65" data-storagestyle="sizeDrag">
+                        <span class="ps-1">px</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="play-audio-template p-0 m-0">
+
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade detailsurah" id="detailsurah" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p> sedang memproses data tafsir</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <script src="surah.js"></script>
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script> -->
+
+</body>
+
+</html>

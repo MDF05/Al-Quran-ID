@@ -1,0 +1,43 @@
+// @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&display=swap');
+// $font-arab-1 :  'Baloo Bhaijaan 2', cursive;
+;
+
+.more-detail{ 
+    .detail {
+        display: none;
+    }
+
+    .show {
+        display: flex;
+    }
+}
+
+//    h2.ayat-surah{
+//        line-height: 45px;
+//    }
+
+//    .cursor-dava {
+//     cursor: pointer;
+//    }
+
+.ol-list-surah {
+    li {
+        a {
+            overflow: hidden;
+            height: max-content;
+            transition: all .5s ease-in;
+             &:hover {
+                background-color: silver;
+                transform: scale(1.02);
+            }
+        }
+   }
+
+    .asma-surah {
+        div {
+            // font-family: $font-arab-1;
+            font-weight: bold;
+            font-style: italic;
+        }
+    }
+}

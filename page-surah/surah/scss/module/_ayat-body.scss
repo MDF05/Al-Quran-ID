@@ -1,0 +1,236 @@
+.home-page {
+    padding: 0%;
+    margin: 0;
+    margin-bottom: 100px;
+}
+
+#detailsurah {
+    z-index: 1000000;
+}
+
+
+.urutan-ayat-surah {
+    font-size: 25px;
+}
+
+
+.play-surah-dava {
+    cursor: pointer;
+    width: max-content;
+    height: max-content;
+}
+
+.pin-surah-dava {
+    cursor: pointer;
+}
+
+span.more-action button{
+    border-bottom: 1px double grey;
+    border-right: 1px dotted grey;
+    font-size: 15px;
+}
+
+.play-audio-template {
+    background-color: grey;
+    position: fixed;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    color: white;
+
+    picture {
+        font-style: oblique;
+        display: block;
+        width: 100vw;
+    }
+
+    button {
+        position: absolute;
+        background-color: red;
+        color: white;
+        right: 0%;
+        top: 0;
+    }
+
+    @media(max-width: 768px) {
+        background-color: grey;
+        place-content: center;
+
+    button {
+        position: absolute;
+        background-color: red;
+        color: white;
+        right: 0%;
+        top: 0%;
+        transform: scale(.9);
+        }
+    }
+
+    @media(max-width : 360px){
+        background-color: grey;
+        place-content: center;
+        text-align: start;
+
+    button {
+        position: absolute;
+        background-color: red;
+        color: white;
+        right: 0%;
+        top: -5%;
+        transform: scale(.7);
+        }
+    }
+}
+
+
+#daftar-surah-nav {
+    position: static;
+    overflow-x: auto;
+    background-color: grey;
+    color: white;
+    padding: 0%;
+    margin: 0%;
+    overflow-y: hidden;
+    display: flex;
+    width: 100%;
+
+    * {
+        cursor: pointer;
+    }
+
+    div.col {
+        display: flex;
+        align-items: stretch;
+        height: 40px;
+        margin: 0%;
+        padding: 0;
+    }
+
+    span.ini-urutan{
+        display:inline-flex;
+        align-items: center;
+        width: max-content;
+        padding: 0 50px;
+        border-left: 2px solid black;
+        cursor: pointer;
+    }
+}
+
+
+
+
+// setting drag 📌
+#settingDrag {
+    top: 50%;
+    left: 0%;
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    span {
+        font-size: 4em;
+        background-color: silver;
+        border-radius: 50%;
+        width: max-content;
+
+        &:active {
+            background: green;
+            color: aliceblue;
+        }
+    }
+
+    span:nth-child(1):active {
+        background-color: red;
+        color: white;
+    }
+
+    span.bawah {
+        margin-bottom: 0px;
+    }
+
+
+    span.kiri {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left:110%;
+    }
+
+    span.kanan {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 110%;
+    }
+
+    span.muncul-pengaturan {
+        margin: 10%;
+    }
+}
+
+#container-pengaturan {
+    z-index: 101;
+    position: fixed;
+    bottom: 0;
+    left: -300px;
+    width: 250px;
+    height: 100%;
+    overflow: auto;
+    background: grey;
+    transition: .5s all cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+    .sub-setting {
+        cursor: pointer;
+
+        * {
+            cursor: pointer;
+        }
+    }
+
+    .size-font input {
+        width: 100px;
+    }
+
+}
+
+.judul-surah {
+    background : rgb(13,110,253);
+    font-size: 16px;
+    color: white;
+
+    .arab-asma {
+        font-weight: bold;
+        font-style: italic;
+    }
+}
+
+.color-ayah {
+    font-size: 38px;
+    color: black;
+
+    span {
+        font-size: 25px;
+    }
+
+    .urutan-ayat-surah {
+        background-color: grey;
+    }
+
+}
+.arti-indonesia {
+    color: rgb(13,110,253);
+    size: 16px;   
+}
+
+.read-indonesia {
+    display: none;
+    color: #ff0000;
+    justify-content: end;
+}
+
