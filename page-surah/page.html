@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="book of al-Quran,buku al-Quran online al-Quran surah al-Quran ebook">
-    <link rel="icon" href="../Al-Quran/my logo/SGN_12_26_2022_1672039804363.png" type="image/x-icon">`;
+    <link rel="icon" href="../Al-Quran/my logo/icon1.jpg" type="image/x-icon">`;
 
     <link rel="stylesheet" href="../css/index.css">
 
@@ -26,63 +26,65 @@
 <body>
 
 
-    <nav>
-        <div class="container-fluid d-flex px-2 align-items-center container-nav">
-            <div class="nav-dav d-flex align-items-center brand-dava">
-                Al-Qur'an
-                <span class="material-symbols-outlined mx-1">
-                    auto_stories
-                </span>
-            </div>
-            <button type="button" class="btn border-0 align-items-center dava-button">
-                <span class="material-symbols-outlined ">
-                    menu
-                </span>
-                <span class="material-symbols-outlined d-none">
-                    close
-                </span>
-            </button>
+    <nav class="container-fluid d-flex align-items-center container-nav" id="nav-id">
+        <div class="nav-dav d-flex align-items-center brand-dava">
+            Al-Qur'an
+            <span class="material-symbols-outlined mx-1">
+                auto_stories
+            </span>
+        </div>
+        <button type="button" class="btn border-0 align-items-center dava-button d-none">
+            <span class="material-symbols-outlined ">
+                menu
+            </span>
+            <span class="material-symbols-outlined d-none">
+                close
+            </span>
+        </button>
 
-            <div class="toggler-nav">
-                <ul class="d-flex togler-items p-0 m-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Surah</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            fitur
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item" href="#">fitur</a></li>
-                            <li><a class="dropdown-item" href="#">fitur</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">tambahkan fitur</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="nav-item search-surah">
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
+        <div class="toggler-nav">
+            <ul class="d-flex togler-items p-0 m-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Surah</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        fitur
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="#">fitur</a></li>
+                        <li><a class="dropdown-item" href="#">fitur</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">tambahkan fitur</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </nav>
 
-    <div class="container my-5 home-page bg-gradient p-0">
+    <div class="container-fluid my-5 home-page bg-gradient px-2">
         <div class="row judul-surah pt-5 py-3">
-            <div class="col">
+            <div class="col-12">
                 <h3 class="text-capitalize text-center text-light fw-bold">daftar surah <br> Al-Quran</h3>
             </div>
+            <div class="input-group mb-3 mt-1 col-12 px-5">
+                <input type="search" class="form-control" id="cariSurah"
+                    aria-label="cari surah berdasarkan nama surah dan nomor urut"
+                    placeholder="cari nama surah dan nomor urut">
+                <span class="input-group-text bg-primary">
+                    <span class="material-symbols-outlined text-light">
+                        search
+                    </span>
+                </span>
+            </div>
         </div>
-        <div class="row m-0 p-0 daftar-surah">
+        <div class="row m-0 p-0 daftar-surah d-flex">
 
         </div>
     </div>

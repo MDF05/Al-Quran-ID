@@ -66,14 +66,16 @@ const halamanSurah = function (url, succes) {
 
 function daftarSurahElemen(elemen) {
   return `
-  <ol class="list-group col-sm-12 col-md-6 col-lg-4 ol-list-surah p-0 m-0 bg-light">
+  <ol class="list-group col-sm-12 col-md-6 col-lg-4 ol-list-surah p-0 m-0">
     <li class="row p-0 m-0">
       <a href="surah/surah.html" class="baca-surah text-decoration-none col list-group-item d-flex justify-content-between align-items-start" data-number="${elemen.number}">
-        <div>${elemen.number}</div>
-        <div class="ms-2 me-auto">
-          <div class="fw-bold">${elemen.name}</div>
-          ${elemen.translationId} 
-        </div>
+      <div class="spesifik-surah d-flex">
+        <span>${elemen.number}.</span>
+        <span class="d-flex flex-column">
+          <span class="fw-bold">${elemen.name}</span>
+          <span class="">${elemen.translationId} </span>
+        </span>
+      </div>
         <div class="text-end asma-surah">
           <div class="fs-4">${elemen.asma}</div>
           <span class="badge bg-primary rounded-pill">${elemen.numberOfAyahs}</span>
@@ -91,7 +93,7 @@ halamanSurah("https://quranapi.idn.sch.id/surah", (e) => {
   surah.forEach((a) => {
     daftarSurah.innerHTML += daftarSurahElemen(a);
   });
-  //
+
   const aNumberSurah = document.querySelectorAll(".baca-surah");
   aNumberSurah.forEach((e) => {
     e.addEventListener("click", function () {
@@ -100,5 +102,35 @@ halamanSurah("https://quranapi.idn.sch.id/surah", (e) => {
     //
   });
   //
+  searchSurah();
 });
-//
+
+function textCheck(elemen, value) {
+  nomor = elemen.children[0].innerText.toLowerCase().trim();
+  pinRed = `<span class="bg-danger">${value}</span>`;
+  nomor = nomor.replaceAll(value, pinRed);
+  elemen.children[0].innerHTML = nomor;
+}
+function searchSurah() {
+  const cariSurah = document.querySelector("#cariSurah");
+  const barter = Array.from(document.querySelectorAll(".spesifik-surah"));
+  cariSurah.addEventListener("input", () => {
+    let value = cariSurah.value.trim().toLowerCase();
+    barter.forEach((e) => {
+      textCheck(e, value);
+      textCheck(e.children[1], value);
+      if (cariSurah.value.length >= 1) {
+        if (e.textContent.toLowerCase().includes(value)) {
+          e.parentElement.parentElement.parentElement.style.order = "1";
+          // e.style.background = "red";
+        } else {
+          e.parentElement.parentElement.parentElement.style.order = "2";
+          // e.style.background = "white";
+        }
+      } else {
+        // e.style.background = "white";
+        e.parentElement.parentElement.parentElement.style.order = "2";
+      }
+    });
+  });
+}

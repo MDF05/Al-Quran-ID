@@ -33,6 +33,8 @@ worker1.addEventListener("message", (e) => {
       }
     });
   });
+
+  pilihAudioSurah();
 });
 
 document.addEventListener("click", (e) => {
@@ -59,13 +61,11 @@ document.addEventListener("click", (e) => {
 });
 
 function putarAudioBaru(target) {
-  const templateAudio = document.querySelector(".container-template-audio");
   const elemenSurah = document.querySelectorAll(".active-surah-view");
   const metaData = target.dataset.datasurah.split(",");
-  const banding =
-    document.querySelector(".judul-surah-audio span:nth-child(2") || "kosong";
+  const banding = document.querySelector(".judul-surah-audio span:nth-child(2");
 
-  if (banding.innerHTML === metaData[1]) {
+  if (banding?.innerHTML === metaData[1]) {
     if (target.innerHTML === "play_arrow") {
       audioSurah.play();
     } else {
@@ -115,4 +115,32 @@ function putarAudioBaru(target) {
   });
 
   elemenSurah[metaData[0] - 1].classList.add("bg-success");
+}
+
+function pilihAudioSurah() {
+  templateAudio = document.querySelector(".container-template-audio");
+  const radioSurahAudio = document.querySelectorAll("input[name='pilihJenis']");
+  const playButtonRadio = document.querySelectorAll(".play-audio-button");
+  const judulAudio = document.querySelector(".judul-audio-surah");
+
+  radioSurahAudio[0].addEventListener("input", () => {
+    playButtonRadio.forEach((e) => {
+      let noSurah = e.dataset.numbersurah;
+      if (noSurah > 100) "";
+      else if (noSurah > 10) noSurah = "0" + noSurah;
+      else noSurah = "00" + noSurah;
+      e.dataset.srcaudio = `https://equran.nos.wjv-1.neo.id/audio-full/Misyari-Rasyid-Al-Afasi/${noSurah}.mp3`;
+    });
+    templateAudio.innerHTML = "";
+    judulAudio.innerHTML = "dengarkan audio surah full";
+  });
+
+  radioSurahAudio[1].addEventListener("input", () => {
+    playButtonRadio.forEach((e) => {
+      e.dataset.srcaudio = e.dataset.srccadangan;
+    });
+    templateAudio.innerHTML = "";
+    judulAudio.innerHTML =
+      "dengarkan audio surah full dan audio terjemahan setiap ayat";
+  });
 }

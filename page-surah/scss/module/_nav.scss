@@ -1,5 +1,15 @@
-@use "../../../home page/scss/module-scss/navbar";
-
-nav {
+nav#nav-id {
+    position: absolute;
+    top: 0;
     background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    color: white;
+    
+    .toggler-nav {
+        a {
+            color :white;
+        }
+    }
 }

@@ -18,7 +18,7 @@ addEventListener("message", (e) => {
                             <div class="col-2 col-sm-1 d-grid align-items-center justify-content-center">
                                 <span class="material-symbols-outlined">
                                     <span class="rounded-5 px-1 play-audio-button" data-numberSurah="${e.nomor}" 
-                                        data-srcAudio="${e.audio}" data-dataSurah="${e.nomor},${e.asma},${e.nama},${e.ayat}">
+                                        data-srcAudio="${e.audio}" data-srccadangan="${e.audio}" data-dataSurah="${e.nomor},${e.asma},${e.nama},${e.ayat}">
                                         play_arrow
                                     </span>
                                 </span>

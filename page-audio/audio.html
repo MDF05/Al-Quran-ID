@@ -20,6 +20,10 @@
         font-size: 1.5rem;
     }
 
+    .play-audio-button::selection {
+        background-color: transparent;
+    }
+
     .header-surah {
         cursor: pointer;
     }
@@ -29,14 +33,80 @@
     }
 </style>
 
-<body class="bg-dark">
+<body class="bg-dark text-bg-dark">
 
-    <div class="container-fluid bg-gradient pt-lg-5 pt-md-3 pt-sm-2 pb-5 mb-5">
+    <nav class="container-fluid d-flex px-2 align-items-center container-nav">
+        <div class="nav-dav d-flex align-items-center brand-dava">
+            Al-Qur'an
+            <span class="material-symbols-outlined mx-1">
+                auto_stories
+            </span>
+        </div>
+        <button type="button" class="btn border-0 align-items-center dava-button">
+            <span class="material-symbols-outlined ">
+                menu
+            </span>
+            <span class="material-symbols-outlined d-none">
+                close
+            </span>
+        </button>
+
+        <div class="toggler-nav">
+            <ul class="d-flex togler-items p-0 m-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Surah</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        fitur
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="#">fitur</a></li>
+                        <li><a class="dropdown-item" href="#">fitur</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">tambahkan fitur</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container pt-lg-5 pt-md-3 pt-sm-2">
+        <div class="row">
+            <div class="col-12">
+                <h5 class="text-capitalize fw-bold text-warning">
+                    pilih mau dengar yang mana ?
+                </h5>
+            </div>
+            <div class="col-12 ">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="pilihJenis" id="radioAudioSurah-1">
+                    <label class="form-check-label text-capitalize" for="radioAudioSurah-1">
+                        hanya audio surah full
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="pilihJenis" id="radioAudioSurah-2" checked>
+                    <label class="form-check-label text-capitalize" for="radioAudioSurah-2">
+                        audio surah full dengan audio terjemahan
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pb-5 mb-5">
         <div class="row pt-lg-5 pt-md-4 pt-4">
             <div class="col-12 text-center">
-                <h3 class="text-capitalize text-light">
+                <h4 class="text-capitalize text-light judul-audio-surah">
                     dengarkan audio surah full dan audio terjemahan per setiap ayat
-                </h3>
+                </h4>
             </div>
             <div class="col-12 text-center pt-1">
                 <div class="input-group">
@@ -60,6 +130,7 @@
     <div class="container-fluid container-template-audio bg-secondary position-fixed bottom-0 p-0 m-0">
 
     </div>
+
 
 
 
