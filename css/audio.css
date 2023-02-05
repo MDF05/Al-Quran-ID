@@ -1,0 +1,93 @@
+nav#nav-id {
+  position: absolute;
+  top: 0;
+  background-color: grey;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  color: white;
+}
+nav#nav-id .toggler-nav {
+  display: none;
+  width: 55%;
+  height: 100%;
+  padding-top: 50px;
+  background-color: grey;
+  z-index: 200;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+nav#nav-id .toggler-nav ul.togler-items {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+nav#nav-id .toggler-nav ul.togler-items li {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+nav#nav-id .toggler-nav a {
+  color: white;
+}
+nav#nav-id .fitur-tambahan a {
+  color: black;
+}
+nav#nav-id .dava-button {
+  color: white;
+  position: relative;
+  z-index: 201;
+}
+@media (min-width: 768px) {
+  nav#nav-id .toggler-nav {
+    display: 50%;
+  }
+}
+@media (min-width: 992px) {
+  nav#nav-id {
+    padding: 0 20px;
+  }
+  nav#nav-id .toggler-nav {
+    display: inherit;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    position: static;
+    padding: 10px 10px;
+  }
+  nav#nav-id .toggler-nav ul.togler-items {
+    flex-direction: row;
+  }
+  nav#nav-id .toggler-nav ul.togler-items li {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+  nav#nav-id .dava-button {
+    display: none;
+  }
+}
+
+.play-audio-button {
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  font-size: 1.5rem;
+}
+
+.play-audio-button::-moz-selection {
+  background-color: transparent;
+}
+
+.play-audio-button::selection {
+  background-color: transparent;
+}
+
+.header-surah {
+  cursor: pointer;
+}
+
+.container-template-audio {
+  z-index: 100;
+}/*# sourceMappingURL=audio.css.map */

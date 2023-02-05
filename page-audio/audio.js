@@ -144,3 +144,14 @@ function pilihAudioSurah() {
       "dengarkan audio surah full dan audio terjemahan setiap ayat";
   });
 }
+
+const buttonNav = document.querySelector("nav button");
+const togleItems = document.querySelector(".toggler-nav");
+
+buttonNav.addEventListener("click", function () {
+  Array.from(this.children).forEach((e) => {
+    e.classList.toggle("d-none");
+  });
+
+  togleItems.classList.toggle("d-flex");
+});
