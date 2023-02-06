@@ -139,6 +139,23 @@ span.more-action button{
         border-radius: 50%;
         width: max-content;
 
+        @media(max-width: 576px) {
+            font-size: 45px;
+        }
+
+        @media(min-width: 576px) {
+            font-size: 50px;
+        }
+
+        @media(min-width: 768px) {
+            font-size: 55px;
+        }
+
+        @media(min-width: 992px) {
+            font-size: 60px;
+        }
+        
+
         &:active {
             background: green;
             color: aliceblue;
