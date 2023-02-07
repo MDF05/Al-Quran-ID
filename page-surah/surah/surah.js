@@ -204,6 +204,8 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("ini-urutan")) {
     worker1.postMessage(e.target.dataset.urutan);
     daftarSurahView(e.target.dataset.urutan);
+  } else if (e.target.classList.contains("hapus-semua-setting")) {
+    clearSetting();
   } else if (e.target.classList.contains("lihat-tafsir")) {
     worker2.postMessage([
       e.target.parentElement.parentElement.dataset.numbertafsir,
@@ -237,10 +239,11 @@ document.addEventListener("click", (e) => {
   } else if (e.target.classList.contains("close-pengaturan")) {
     e.target.parentElement.parentElement.classList.toggle("muncul");
     e.target.parentElement.parentElement.style.left = "-300px";
-  } else if (e.target.classList.contains("judul-setting")) {
-    e.target.parentElement.nextElementSibling.classList.toggle("d-none")
-      ? (e.target.firstElementChild.innerHTML = "⇧")
-      : (e.target.firstElementChild.innerHTML = "⇩");
+  } else if (e.target.classList.contains("pengaturan-bawah")) {
+    const pengaturan = document.getElementById("container-pengaturan");
+    pengaturan.classList.toggle("muncul")
+      ? (pengaturan.style.left = "0px")
+      : (pengaturan.style.left = "-300px");
   }
 });
 
@@ -275,7 +278,6 @@ worker1.addEventListener("message", (e) => {
   localStorage.setItem("noSurah", e.data[2]);
   localStorage.removeItem("nomor");
   document.title = e.data[1];
-  daftarSurahView(e.data[2]);
 
   const spanPlay = document.querySelectorAll(".play-surah-dava");
   spanPlay.forEach((span) => {
@@ -293,6 +295,7 @@ worker1.addEventListener("message", (e) => {
   //
 
   setStyleHalaman();
+  daftarSurahView(e.data[2]);
 });
 
 // worker ke 2 📌🟢
@@ -420,4 +423,15 @@ function setStyleHalaman() {
   checkStyle(localStorage.getItem(`colorDrag`));
   checkStyle(localStorage.getItem(`sizeDrag`));
   checkStyle(localStorage.getItem(`displayAyatArti`));
+}
+
+function clearSetting() {
+  let noSurahPage = localStorage.getItem("noSurah");
+  confirm(
+    "apakah anda yakin untuk menghapus tampilan saat ini,dan tampilan nya akan kembali setelan default/pengaturan awal aplikasi"
+  )
+    ? (localStorage.clear(),
+      localStorage.setItem("noSurah", noSurahPage),
+      location.reload())
+    : "";
 }

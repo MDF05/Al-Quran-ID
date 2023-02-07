@@ -1,7 +1,6 @@
 .home-page {
   padding: 0%;
   margin: 0;
-  margin-bottom: 100px;
 }
 
 #detailsurah {
@@ -189,9 +188,10 @@ span.more-action button {
   left: -300px;
   width: 250px;
   height: 100%;
-  overflow: auto;
-  background: grey;
   transition: 0.5s all cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+#container-pengaturan .tombol-header-setting {
+  background: grey;
 }
 #container-pengaturan .sub-setting {
   cursor: pointer;
@@ -201,6 +201,11 @@ span.more-action button {
 }
 #container-pengaturan .size-font input {
   width: 100px;
+}
+#container-pengaturan .atur-mode-tampilan {
+  height: 100%;
+  background-color: white;
+  overflow: auto;
 }
 
 .judul-surah {

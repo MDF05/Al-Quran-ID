@@ -8,7 +8,7 @@ addEventListener("message", (e) => {
       if (e.data[2] === "tafsir") {
         baru = `<div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header headerTafsir">
                     <h5 class="modal-title">
                     ${
                       a.data.surah.name.short

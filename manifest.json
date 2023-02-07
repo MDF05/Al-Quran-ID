@@ -27,5 +27,6 @@
     "serviceworker": {
     "src": "/service-worker.js",
     "scope": "/"
-  }
+  },
+  "version" : "1.0.0"
 }

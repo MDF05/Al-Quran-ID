@@ -38,6 +38,48 @@
 
     </div>
 
+    <div class="menu-setting-bawah container-fluid pb-5 mb-5">
+        <ul class="list-group row d-flex flex-row justify-content-center text-center">
+            <li class="list-group-item col-sm-3 bg-transparent">
+                <button type="button" class="btn btn-secondary col-12">
+                    <a href="../page.html"
+                        class="text-decoration-none text-light d-flex align-items-center bg-gradient justify-content-center">
+                        <span class="material-symbols-outlined ">keyboard_double_arrow_left</span>
+                        Back
+                    </a>
+                </button>
+            </li>
+            <li class="list-group-item col-sm-3 bg-transparent">
+                <button type="button" class="btn btn-secondary col-12">
+                    <a href="../../index.html"
+                        class="text-decoration-none text-light d-flex align-items-center bg-gradient justify-content-center">
+                        <span class="material-symbols-outlined ">home</span>
+                        Home
+                    </a>
+                </button>
+            </li>
+            <li class="list-group-item col-sm-3 bg-transparent">
+                <button type="button" class="btn btn-secondary col-12">
+                    <a href="../../page-audio/audio.html"
+                        class="text-decoration-none text-light d-flex align-items-center bg-gradient justify-content-center">
+                        <span class="material-symbols-outlined">music_note</span>
+                        Qur'an Audio
+                    </a>
+                </button>
+            </li>
+            <li class="list-group-item col-sm-3 bg-transparent">
+                <button type="button" class="btn btn-secondary col-12">
+                    <div
+                        class="text-decoration-none text-light d-flex align-items-center bg-gradient justify-content-center pengaturan-bawah">
+                        <span class=" material-symbols-outlined">settings</span>
+                        Setting
+                    </div>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+
     <div id="settingDrag" draggable="true">
         <span class="material-symbols-outlined gear-setting setting-melayang-color" title="double click">
             ads_click
@@ -60,23 +102,24 @@
         </span>
     </div>
 
+
     <div class="pengaturan-container" id="container-pengaturan">
-        <div class="text-end">
-            <button type="button" class="btn btn-danger close-pengaturan" title="close pengaturan">X</button>
+        <div class="d-flex justify-content-between tombol-header-setting py-2 px-1">
+            <button type="button" class="btn btn-warning hapus-semua-setting"
+                title="kembali ke setting awal atau hapus semua perubahan">Default setting</button>
+            <button type="button" class="btn btn-danger close-pengaturan" title="tutup pengaturan">X</button>
         </div>
-        <div class="header-setting text-center fw-bold text-warning">
-            <h5>Setting</h5>
-        </div>
-        <div class="sub-setting pt-2 ps-2">
-            <div class="text-warning">
-                <h6 class="judul-setting"><span class="text-light">⇧</span>List Semua Surah</h6>
+        <div class="atur-mode-tampilan pt-4">
+            <div class="header-setting text-center fw-bold text-warning">
+                <h5>Setting Tampilan</h5>
             </div>
-            <div class="isi-setting d-none">
+            <details>
+                <summary class="">Daftar Surah Di Atas</summary>
                 <div class="value-setting ps-3">
                     <div class="pt-1">
                         <label for="background-judul">background</label>
                         <input type="color" id="background-judul" data-ubahStyle="background"
-                            data-targetClass="daftar-surah-nav" class="setting-style" value="#808080"
+                            data-targetClass="ini-urutan" class="setting-style" value="#808080"
                             data-storagestyle="backgroundListSurah">
                     </div>
                     <div class="pt-1">
@@ -87,14 +130,13 @@
                     </div>
                     <div class="pt-1">
                         <label for="color-judul">color</label>
-                        <input type="color" id="color-judul" data-ubahStyle="color" data-targetClass="daftar-surah-nav"
+                        <input type="color" id="color-judul" data-ubahStyle="color" data-targetClass="ini-urutan"
                             class="setting-style" value="#ffffff" data-storagestyle="colorListSurah">
                     </div>
                     <div class="pt-1">
                         <label for="judul-color-active">color active</label>
-                        <input type="color" id="judul-color-active" data-ubahStyle="color"
-                            data-targetClass="play-surah-dava" class="setting-style active-style active-color"
-                            data-storagestyle="j-color-active">
+                        <input type="color" id="judul-color-active" data-ubahStyle="color" data-targetClass="ini-urutan"
+                            class="setting-style active-style active-color" data-storagestyle="j-color-active">
                     </div>
                     <div class="size-font">
                         <label for="size-judul">size</label>
@@ -109,13 +151,9 @@
                             class="setting-style" data-storagestyle="borderListSurah">
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="sub-setting pt-2 ps-2">
-            <div class="text-warning">
-                <h6 class="judul-setting"><span class="text-light">⇧</span>Text Judul/Header</h6>
-            </div>
-            <div class="isi-setting d-none">
+            </details>
+            <details>
+                <summary class="">Text Judul/Header</summary>
                 <div class="value-setting ps-3">
                     <div class="pt-1">
                         <label for="color-header">color</label>
@@ -134,13 +172,9 @@
                             data-ubahStyle="background" value="#0D6EFD" data-storagestyle="backgroundHeader">
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="sub-setting pt-2 ps-2">
-            <div class="text-warning">
-                <h6 class="judul-setting"><span class="text-light">⇧</span>Text Ayat/Arab</h6>
-            </div>
-            <div class="isi-setting d-none">
+            </details>
+            <details>
+                <summary class="">Text Ayat/Arab</summary>
                 <div class="value-setting ps-3">
                     <div class="pt-1">
                         <label for="color-arab">color</label>
@@ -155,13 +189,9 @@
                         <span class="ps-1">px</span>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="sub-setting pt-2 ps-2">
-            <div class="text-warning">
-                <h6 class="judul-setting"><span class="text-light">⇧</span>Nomor Ayat/Arab</h6>
-            </div>
-            <div class="isi-setting d-none">
+            </details>
+            <details>
+                <summary class="">Nomor Ayat/Arab</summary>
                 <div class="value-setting ps-3">
                     <div class="pt-1">
                         <label for="number-arab">color</label>
@@ -182,13 +212,9 @@
                         <span class="ps-1">px</span>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="sub-setting pt-2 ps-2">
-            <div class="text-warning">
-                <h6 class="judul-setting"><span class="text-light">⇧</span>Text Ayat/Indonesia</h6>
-            </div>
-            <div class="isi-setting d-none">
+            </details>
+            <details>
+                <summary class="">Text Ayat/Indonesia</summary>
                 <div class="value-setting ps-3">
                     <select name="text-ayatIndo" id="text-ayatIndo" data-ubahStyle="display"
                         data-targetClass="read-indonesia" class="setting-style" data-storagestyle="displayAyatIndo">
@@ -208,13 +234,9 @@
                         <span class="ps-1">px</span>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="sub-setting pt-2 ps-2">
-            <div class="text-warning">
-                <h6 class="judul-setting"><span class="text-light">⇧</span>Text Terjemahan/Arti</h6>
-            </div>
-            <div class="isi-setting d-none">
+            </details>
+            <details>
+                <summary class="">Text Terjemahan/Arti</summary>
                 <div class="value-setting ps-3">
                     <select name="text-terjemahan" id="text-terjemahan" data-targetClass="arti-indonesia"
                         class="setting-style" data-storagestyle="displayAyatArti" data-ubahStyle="display">
@@ -235,13 +257,9 @@
                         <span class="ps-1">px</span>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="sub-setting pt-2 ps-2">
-            <div class="text-warning">
-                <h6 class="judul-setting"><span class="text-light">⇧</span>Nomor button aksi(sudut)</h6>
-            </div>
-            <div class="isi-setting d-none">
+            </details>
+            <details>
+                <summary class="">Tombol Nomor button(sudut)</summary>
                 <div class="value-setting ps-3">
                     <div class="pt-1">
                         <label for="number-indo">color</label>
@@ -262,13 +280,9 @@
                         <span class="ps-1">px</span>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="sub-setting pt-2 ps-2">
-            <div class="text-warning">
-                <h6 class="judul-setting"><span class="text-light">⇧</span>Play Button Ayat(sudut)</h6>
-            </div>
-            <div class="isi-setting d-none">
+            </details>
+            <details>
+                <summary class="">Tombol Play Button(sudut)</summary>
                 <div class="value-setting ps-3">
                     <div class="pt-1">
                         <label for="play-button">color</label>
@@ -300,34 +314,28 @@
                         <span class="ps-1">px</span>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="sub-setting pt-2 ps-2">
-            <div class="text-warning">
-                <h6 class="judul-setting"><span class="text-light">⇧</span>Background Ayat<h6>
-            </div>
-            <div class="isi-setting d-none">
-                <div class="value-setting ps-3">
-                    <div class="pt-1">
-                        <label for="background-body">body</label>
-                        <input type="color" id="background-body" data-targetClass="ayat-setting-style"
-                            data-ubahStyle="background" class="setting-style" value="#ffffff"
-                            data-storagestyle="backgroundAyat">
-                    </div>
-                    <div class="pt-1">
-                        <label for="border-ayatBody">border</label>
-                        <input type="color" id="border-ayatBody" data-targetClass="ayat-setting-style"
-                            data-ubahStyle="borderColor" class="setting-style" value="#000000"
-                            data-storagestyle="borderAyat">
+            </details>
+            <details>
+                <summary class="">Background Ayat/body</summary>
+                <div class="isi-setting">
+                    <div class="value-setting ps-3">
+                        <div class="pt-1">
+                            <label for="background-body">body</label>
+                            <input type="color" id="background-body" data-targetClass="ayat-setting-style"
+                                data-ubahStyle="background" class="setting-style" value="#ffffff"
+                                data-storagestyle="backgroundAyat">
+                        </div>
+                        <div class="pt-1">
+                            <label for="border-ayatBody">border</label>
+                            <input type="color" id="border-ayatBody" data-targetClass="ayat-setting-style"
+                                data-ubahStyle="borderColor" class="setting-style" value="#000000"
+                                data-storagestyle="borderAyat">
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="sub-setting pt-2 ps-2">
-            <div class="text-warning">
-                <h6 class="judul-setting"><span class="text-light">⇧</span>Audio Control</h6>
-            </div>
-            <div class="isi-setting d-none">
+            </details>
+            <details>
+                <summary class="">Audio Control</summary>
                 <div class="value-setting ps-3">
                     <select name="audio-control" id="audio-control" data-ubahStyle="display"
                         data-targetClass="play-audio-template" class="setting-style" data-storagestyle="displayAudio">
@@ -353,13 +361,9 @@
                         <span class="ps-1">px</span>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="sub-setting pt-2 ps-2">
-            <div class="text-warning">
-                <h6 class="judul-setting"><span class="text-light">⇧</span>Tombol Drag Melayang</h6>
-            </div>
-            <div class="isi-setting d-none">
+            </details>
+            <details>
+                <summary class="">Tombol Drag Melayang</summary>
                 <div class="value-setting ps-3">
                     <select name="drag-button" id="drag-button" data-targetClass="setting-melayang-color"
                         class="setting-style" data-storagestyle="displayDrag" data-ubahStyle="display">
@@ -385,10 +389,9 @@
                         <span class="ps-1">px</span>
                     </div>
                 </div>
-            </div>
+            </details>
         </div>
     </div>
-
     <div class="play-audio-template p-0 m-0">
 
     </div>
@@ -411,6 +414,41 @@
             </div>
         </div>
     </div>
+
+    <!-- <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header headerTafsir">
+                <h5 class="modal-title">
+                    }</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 text-end fst-italic fs-1">
+                        ${a.data.text.arab}
+                    </div>
+                    <div class="col-12 pt-4">
+                        ${a.data.text.transliteration.en}
+                    </div>
+                    <div class="col-12 pt-2 text-center">
+                        <h5>Terjemahan</h5>
+                    </div>
+                    <div class="col-12">
+                        ${a.data.translation.id}
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-12">
+                        <h5 class="text-center">Tafsir</h5>
+                    </div>
+                    <div class="col-12">${a.data.tafsir.id.long}</div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div> -->
 
 
 

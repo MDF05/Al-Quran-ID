@@ -57,6 +57,16 @@ document.addEventListener("click", (e) => {
     e.target.parentElement.parentElement.remove();
     const metaData = e.target.dataset.nosurah;
     elemenSurah[metaData - 1].classList.remove("bg-success");
+  } else if (e.target.classList.contains("ulangi-audio")) {
+    e.target.classList.toggle("bg-success")
+      ? audioSurah.setAttribute("loop", "true")
+      : audioSurah.removeAttribute("loop");
+  } else if (e.target.classList.contains("acak-audio-surah")) {
+    const playAcakSpan =
+      document.querySelectorAll(".play-audio-button")[
+        Math.round(Math.random() * 114)
+      ];
+    putarAudioBaru(playAcakSpan);
   }
 });
 
@@ -87,7 +97,10 @@ function putarAudioBaru(target) {
               </audio>
             </figure>
           </div>
-          <div class="col-1 p-0 m-0 text-end">
+          <div class="col-1 p-0 m-0 text-end d-flex flex-lg-row align-items-lg-start flex-column-reverse align-items-end justify-content-end">
+            <button type="button" class="btn btn-primary ulangi-audio material-symbols-outlined" title="ulangi surah ini">
+              repeat
+            </button>
             <button type="button" class="btn btn-danger close-control-audio" data-nosurah="${metaData[0]}">X</button>
           </div>
         </div>
