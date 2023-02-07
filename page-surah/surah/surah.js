@@ -157,13 +157,13 @@ function scrollViewSurah(tujuan, span, paren) {
 }
 
 document.addEventListener("click", (e) => {
-  const spanSetting = settingDrag.querySelector("span.gear-setting");
-  const spanPlay = document.querySelectorAll(".play-surah-dava");
-  const spanArrow = settingDrag.querySelectorAll("span.arrow-scroll");
-  const numberSurah = document.querySelector(".header-surah-number");
+  spanSetting = settingDrag.querySelector("span.gear-setting");
+  spanPlay = document.querySelectorAll(".arti-indonesia");
+  spanArrow = settingDrag.querySelectorAll("span.arrow-scroll");
+  numberSurah = document.querySelector(".header-surah-number");
   let halamanQuran = parseFloat(numberSurah.dataset.numberquran);
   if (e.target.classList.contains("arrow-scroll")) {
-    const arahPanah = e.target.dataset.panah;
+    arahPanah = e.target.dataset.panah;
     allSpan.forEach((e) => {
       e.classList.toggle("d-none");
     });
