@@ -83,8 +83,8 @@ function putarAudioBaru(target) {
     }
   } else {
     templateAudio.innerHTML = `
-        <div class="row p-0 m-0">
-          <div class="col-11">
+        <div class="row p-0 m-0 d-flex justify-content-between">
+          <div class="col-10 col-sm-11">
             <figure class="row pt-2">
               <figcaption class="text-center text-capitalize">
                 <h6 class="text-light d-flex justify-content-between judul-surah-audio">
@@ -97,7 +97,7 @@ function putarAudioBaru(target) {
               </audio>
             </figure>
           </div>
-          <div class="col-1 p-0 m-0 text-end d-flex flex-lg-row align-items-lg-start flex-column-reverse align-items-end justify-content-end">
+          <div class="col-1 p-0 m-0 text-end d-flex flex-lg-row align-items-lg-start flex-column-reverse align-items-end justify-content-end audio-button-elemen">
             <button type="button" class="btn btn-primary ulangi-audio material-symbols-outlined" title="ulangi surah ini">
               repeat
             </button>

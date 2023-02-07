@@ -90,4 +90,12 @@ nav#nav-id .dava-button {
 
 .container-template-audio {
   z-index: 100;
+}
+
+.audio-button-elemen button {
+  display: grid;
+  place-content: center;
+  font-size: 15px;
+  height: 30px;
+  width: 40px;
 }/*# sourceMappingURL=audio.css.map */
