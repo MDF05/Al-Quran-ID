@@ -2,7 +2,7 @@
 // header home page 📌
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&family=Lemon&display=swap');
 .image-hero-dava {
-    background-image: url("../../../Al-Quran/my logo/al-quran.jpg");
+    background-image: url("../../al-quran/my-logo/al-quran.jpg");
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -27,4 +27,26 @@
     .arti-hadist {
         font-size: calc(1vw + 2vh);
     }
+}
+
+.button {
+    color: #ecf0f1;
+    font-size: 17px;
+    background-color: #212121;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 6px 0px #787878;
+    transition: all 50ms;
+    width: 340px;
+}
+@media(max-width: 330px) {
+    .button {
+        width: 200px;
+    }
+}
+.button:active {
+    box-shadow: 0px 2px 0px #787878;
+    position: relative;
+    top: 2px;
 }

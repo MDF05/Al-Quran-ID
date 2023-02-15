@@ -1,23 +1,24 @@
 {
-  "short_name": "Al-Quran",
-  "name": "Al-Quran Indonesia Lengkap",
+  "short_name": "Al-Quran CLoud",
+  "name": "Al-Quran CLoud Indonesia",
   "description": "Al-Quran lengkap versi Indonesia, Baca, dengarkan, dan pahami ayat-ayat suciAl-Quran dengan mudah dan nyaman.makna dan esensi Al-Quran melalui tafsi,audio dan teks terjemahan yang tersedia. artikel, dan bahan belajar lainnya. Dukung perjalanan spiritual Anda dengan mempelajari ayat-ayat suci Al-Quran secara mendalam dan memahami makna dan filosofi dari setiap surah.",
   "icons": [
     {
-      "src": "/Al-Quran/my logo/icon2.jpg",
+      "src": "/al-quran/my-logo/icon2.jpg",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/Al-Quran/my logo/icon1.jpg",
+      "src": "/al-quran/my-logo/icon1.jpg",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": "/index.html",
+  "start_url": "/home-page/home.html",
   "background_color": "#ffffff",
   "display": "standalone",
   "theme_color": "#000000",
+  "version" : "3.1.1",
   "orientation": "portrait",
   "scope": "/",
   "dir": "ltr",
@@ -27,6 +28,5 @@
     "serviceworker": {
     "src": "/service-worker.js",
     "scope": "/"
-  },
-  "version" : "1.0.1"
+  }
 }
