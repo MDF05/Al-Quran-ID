@@ -4,27 +4,27 @@
    "description": "Aplikasi Al-Quran PWA memungkinkan pengguna untuk membaca dan mempelajari Al-Quran secara online. Dilengkapi dengan fitur-fitur seperti pencarian ayat,video, pengulangan, terjemahan, dan tafsir, pengguna dapat dengan mudah mengakses berbagai macam informasi tentang setiap ayat Al-Quran.",
   "icons": [
     {
-      "src": "icons/icon-72x72.png",
+      "src": "/al-quran/my-logo/icon72.jpg",
       "type": "image/png",
       "sizes": "72x72"
     },
     {
-      "src": "icons/icon-96x96.png",
+      "src": "/al-quran/my-logo/icon96.jpg",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "icons/icon-128x128.png",
+      "src": "/al-quran/my-logo/icon128.jpg",
       "type": "image/png",
       "sizes": "128x128"
     },
     {
-      "src": "icons/icon-144x144.png",
+      "src": "/al-quran/my-logo/icon144.jpg",
       "type": "image/png",
       "sizes": "144x144"
     },
     {
-      "src": "icons/icon-152x152.png",
+      "src": "/al-quran/my-logo/icon152.jpg",
       "type": "image/png",
       "sizes": "152x152"
     },
@@ -34,7 +34,7 @@
       "type": "image/png"
     },
     {
-      "src": "icons/icon-384x384.png",
+      "src": "/al-quran/my-logo/icon384.jpg",
       "type": "image/png",
       "sizes": "384x384"
     },
