@@ -1,15 +1,45 @@
 {
-  "short_name": "Al-Quran CLoud",
-  "name": "Al-Quran CLoud Indonesia",
-  "description": "Al-Quran lengkap versi Indonesia, Baca, dengarkan, dan pahami ayat-ayat suciAl-Quran dengan mudah dan nyaman.makna dan esensi Al-Quran melalui tafsi,audio dan teks terjemahan yang tersedia. artikel, dan bahan belajar lainnya. Dukung perjalanan spiritual Anda dengan mempelajari ayat-ayat suci Al-Quran secara mendalam dan memahami makna dan filosofi dari setiap surah.",
+  "short_name": "Al-Quran Cloud",
+  "name": "Al-Quran Cloud Indonesia",
+   "description": "Aplikasi Al-Quran PWA memungkinkan pengguna untuk membaca dan mempelajari Al-Quran secara online. Dilengkapi dengan fitur-fitur seperti pencarian ayat,video, pengulangan, terjemahan, dan tafsir, pengguna dapat dengan mudah mengakses berbagai macam informasi tentang setiap ayat Al-Quran.",
   "icons": [
     {
-      "src": "/al-quran/my-logo/icon2.jpg",
+      "src": "icons/icon-72x72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "icons/icon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "icons/icon-128x128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "icons/icon-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "icons/icon-152x152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "/al-quran/my-logo/icon192.jpg",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/al-quran/my-logo/icon1.jpg",
+      "src": "icons/icon-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "/al-quran/my-logo/icon512.jpg",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -18,15 +48,15 @@
   "background_color": "#ffffff",
   "display": "standalone",
   "theme_color": "#000000",
-  "version" : "3.1.1",
   "orientation": "portrait",
   "scope": "/",
   "dir": "ltr",
   "lang": "id-ID",
   "related_applications": [],
   "prefer_related_applications": false,
-    "serviceworker": {
+  "serviceworker": {
     "src": "/service-worker.js",
     "scope": "/"
-  }
+  },
+  "versi" : "1.1.1"
 }

@@ -4,6 +4,33 @@
  <head>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="version" content="1.1.1">
+     <meta name="apple-mobile-web-app-version" content="1.1.1">
+     <meta name="apple-mobile-web-app-capable" content="yes">
+     <meta name="apple-mobile-web-app-title" content="Al-Quran Cloud Indonesia">
+     <meta name="author" content="muhammad dava fahreza">
+     <meta name="keywords" content="Al-Quran,Muslim,Islam,quran,ayah,ayat suci,kitab umat islam,book,PWA,Apk,Indonesia">
+     <meta name="Al-Quran Cloud Indonesia">
+     <meta name="description"
+         content=" Al-Quran lengkap versi Indonesia, Temukan keagungan dan kemurnian Al-Quran melalui situs web resmi kami.Baca, dengarkan, dan pahami ayat-ayat suciAl-Quran dengan mudah dan nyaman. Dapatkan pemahaman yang lebih dalam tentang makna dan esensi Al-Quran melalui tafsi,audio dan teks terjemahan yang tersedia. Nikmati pengalaman belajar Al-Quran yang interaktif dan memuaskan hanya dengan satu klik.">
+
+     <meta name="robots" content="index, follow">
+     <meta name="lang" content="id">
+     <meta name="og:title" content="Al-Quran Cloud Indonesia">
+     <meta name="og:description"
+         content="Aplikasi Al-Quran Berbasis Website menggunakan teknologi PWA(Progressive Web App), Al-Quran Cloud Indonesia tersedia ayat legkap,terjemahan, audio ayat,audio terjemahan,dan tafsir">
+     <meta name="og:type" content="website">
+     <meta name="og:image" content="/al-quran/icon512.jpg">
+     <meta name="og:url" content="https://al-quran-id.vercel.app/">
+     <meta name="og:site_name" content="Al-Quran Cloud Indonesia">
+     <meta name="og:locale" content="id_ID">
+     <meta name="og:video" content="https://www.youtube.com/embed/8LH_bN_zo_s">
+     <meta name="og:video:type" content="video/mp4">
+     <meta name="og:video:width" content="640">
+     <meta name="og:video:height" content="480">
+
+
+
      <title>Al-Quran Indonesia</title>
 
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -12,15 +39,16 @@
      <link rel="stylesheet"
          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-     <link rel="shortcut icon" href="al-quran/my-logo/icon2.jpg" type="image/x-icon">
+     <link rel="shortcut icon" href="al-quran/my-logo/icon192.jpg" type="image/x-icon">
 
      <link rel="stylesheet" href="css/unduh.css">
+
      <link rel="manifest" href="manifest.json">
  </head>
 
  <body>
 
-     <nav class="container-fluid d-flex align-items-center container-nav" id="nav-id">
+     <nav class="container-fluid d-flex align-items-center container-nav position-fixed" id="nav-id">
          <div class="nav-dav d-flex align-items-center brand-dava">
              Al-Qur'an
              <span class="material-symbols-outlined mx-1">
@@ -39,24 +67,27 @@
          <div class="toggler-nav">
              <ul class="d-flex togler-items p-0 m-0">
                  <li class="nav-item">
-                     <a class="nav-link active" aria-current="page" href="home-page/home.html">Home</a>
+                     <a class="nav-link active" aria-current="page" href="#read-apk">Read</a>
                  </li>
                  <li class="nav-item">
-                     <a class="nav-link" href="#">Qur`an Text</a>
+                     <a class="nav-link active" aria-current="page" href="#install-apk">Install</a>
                  </li>
                  <li class="nav-item">
-                     <a class="nav-link" href="../page-audio/audio.html">Qura`an Audio</a>
+                     <a class="nav-link" href="#video-panduan">Video</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="#about-apk">About</a>
                  </li>
                  <li class="nav-item dropdown">
-                     <a class="nav-link" href="page-dev/dev.html">
-                         Developer
+                     <a class="nav-link" href="#latar-belakang">
+                         Latar Belakang
                      </a>
                  </li>
              </ul>
          </div>
      </nav>
      <div class="container-fluid image-header">
-         <div class="row d-flex justify-content-center text-capitalize align-items-center tombol-read">
+         <div class="row d-flex justify-content-center text-capitalize align-items-center tombol-read" id="read-apk">
              <div class="col-lg-4 col-sm-6 d-flex justify-content-center">
                  <a href="home-page/home.html"
                      class="bg-primary text-decoration-none text-light p-1 fs-5 d-flex align-items-center justify-content-arround rounded-4">
@@ -83,7 +114,7 @@
          </div>
          <div class="row text-center pt-3">
              <figure class="col">
-                 <img src="al-quran/my-logo/icon2.jpg" alt="baru" class="img-thumbnail rounded-5 img-fluid">
+                 <img src="al-quran/my-logo/icon192.jpg" alt="baru" class="img-thumbnail rounded-5 img-fluid">
                  <figcaption class="text-muted">Logo Aplikasi Al-Quran</figcaption>
              </figure>
          </div>
@@ -102,7 +133,7 @@
              Al-Quran di
              perangkat seluler Anda.
          </div>
-         <div class="row pt-4 justify-content-center text-center">
+         <div class="row pt-4 justify-content-center text-center" id="install-apk">
              Klik Tombol dibawah ini untuk menginstall aplikasi atau menambahkan aplikasi ke layar utama
          </div>
          <div class="row justify-content-center">
@@ -129,7 +160,38 @@
                  akan muncul pop up, lalu klik instal atau tambahkan ke layar utama
              </div>
          </div>
-         <div class="row pt-5">
+         <div class="row" id="video-panduan">
+             <div class="col-12">
+                 <h1 class="text-center text-capitalize text-decoration-underline">
+                     Video Panduan Penggunaan Aplikasi Sederhana
+                 </h1>
+             </div>
+             <div class="col-12 text-center mt-3 text-capitalize text-muted">
+                 <h3>Video Panduan Potrait Orientation,smartphone,aspect ratio 19:6</h3>
+             </div>
+             <div class="col-12 d-flex justify-content-center">
+                 <iframe width="853" height="480" src="https://www.youtube.com/embed/HtQnBElyMqw"
+                     title="Panduan Aplikasi Al Qur&#39;an Sederhana berbasis Website" frameborder="0"
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                     allowfullscreen></iframe>
+             </div>
+             <div class="col-12 text-center pt-2">
+                 sebenarnya ya sama aja ya tapi udah terlanjur dibuat, mending dipajang disini dari pada di hapus ^_^
+             </div>
+             <div class="col-12">
+                 <div class="col-12 text-capitalize text-muted text-center pt-3">
+                     <h3>Video Panduan landscape Orientation,desktop,aspect ratio 6:19</h3>
+                 </div>
+                 <div class="col-12 text-center">
+                     <iframe width="853" height="480" src="https://www.youtube.com/embed/8LH_bN_zo_s"
+                         title="Panduan Penggunaan Aplikasi Al-Qur&#39;an berbasis Website || landscape Orientation || Aspect Ratio 16:9"
+                         frameborder="0"
+                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                         allowfullscreen></iframe>
+                 </div>
+             </div>
+         </div>
+         <div class="row pt-5" id="about-apk">
              <div class="col-12">
                  <h1 class="text-center text-capitalize text-decoration-underline">tentang aplikasi</h1>
              </div>
@@ -209,7 +271,7 @@
                  memberikan notifikasi, dan dapat digunakan secara offline, yang membuatnya lebih fleksibel dan dapat
                  diakses oleh pengguna dengan koneksi internet yang lambat atau tidak ada koneksi internet sama sekali.
              </div>
-             <div class="row pt-5">
+             <div class="row pt-5" id="latar-belakang">
                  <div class="col-12">
                      <h1 class="text-center text-capitalize text-decoration-underline">latar belakang</h1>
                  </div>
