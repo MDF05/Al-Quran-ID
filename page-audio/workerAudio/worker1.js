@@ -1,9 +1,13 @@
-addEventListener("message", (e) => {
+addEventListener("message", (data) => {
   fetch(`https://api.npoint.io/99c279bb173a6e28359c/data`)
     .then((e) => e.json())
     .then((a) => {
       let elemenSurah = "";
       a.forEach((e) => {
+        let noSurah = e.nomor;
+        if (noSurah > 100) "";
+        else if (noSurah > 10) noSurah = "0" + noSurah;
+        else noSurah = "00" + noSurah;
         elemenSurah += `
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4 penanda-container-surah">
                 <ul class="list-group">
@@ -18,7 +22,7 @@ addEventListener("message", (e) => {
                             <div class="col-2 col-sm-1 d-grid align-items-center justify-content-center">
                                 <span class="material-symbols-outlined">
                                     <span class="rounded-5 px-1 play-audio-button" data-numberSurah="${e.nomor}" 
-                                        data-srcAudio="${e.audio}" data-srccadangan="${e.audio}" data-dataSurah="${e.nomor},${e.asma},${e.nama},${e.ayat}">
+                                        data-srcAudio="https://equran.nos.wjv-1.neo.id/audio-full/Misyari-Rasyid-Al-Afasi/${noSurah}.mp3" data-srccadangan="${e.audio}" data-dataSurah="${e.nomor},${e.asma},${e.nama},${e.ayat}">
                                         play_arrow
                                     </span>
                                 </span>
