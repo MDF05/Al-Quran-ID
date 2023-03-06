@@ -1,3 +1,10 @@
+
+
+function linkAudio(audio) {
+    return audio.replace("ia802609.us.archive.org/13/items/quraninindonesia", "ia801304.us.archive.org/11/items/QuranMP3indonesia")
+}
+
+
 addEventListener("message", (data) => {
   fetch(`https://api.npoint.io/99c279bb173a6e28359c/data`)
     .then((e) => e.json())
@@ -21,8 +28,7 @@ addEventListener("message", (data) => {
                             </div>
                             <div class="col-2 col-sm-1 d-grid align-items-center justify-content-center">
                                 <span class="material-symbols-outlined">
-                                    <span class="rounded-5 px-1 play-audio-button" data-numberSurah="${e.nomor}" 
-                                        data-srcAudio="https://equran.nos.wjv-1.neo.id/audio-full/Misyari-Rasyid-Al-Afasi/${noSurah}.mp3" data-srccadangan="${e.audio}" data-dataSurah="${e.nomor},${e.asma},${e.nama},${e.ayat}">
+                                    <span class="rounded-5 px-1 play-audio-button" data-numberSurah="${e.nomor}" data-srcAudio="${linkAudio(e.audio)}" data-srccadangan="${linkAudio(e.audio)}" data-dataSurah="${e.nomor},${e.asma},${e.nama},${e.ayat}">
                                         play_arrow
                                     </span>
                                 </span>
