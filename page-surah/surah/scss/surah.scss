@@ -1,1 +1,83 @@
-@use "module/ayat-body"
+@use "module/ayat-body";
+
+.black-view .view-edit {
+    display: inline-grid;
+    place-content: center;
+    width: 50px;
+    height: 55px;
+    border-radius: 50% ;
+
+    &:nth-child(1) {
+        background-image: linear-gradient(to left , red 50%, black 50%);
+    }
+    
+    &:nth-child(2) {
+        background-image: linear-gradient(to left , blue 50%, black 50%);
+    }
+
+    &:nth-child(3) {
+        background-image: linear-gradient(to left , green 50%, black 50%);
+    }
+
+    &:nth-child(4) {
+        background-image: linear-gradient(to left , yellow 50%, black 50%);
+    }
+
+    &:nth-child(5) {
+        background-image: linear-gradient(to left , orange 50%, black 50%);
+    }
+
+    &:nth-child(6) {
+        background-image: linear-gradient(to left , purple 50%, black 50%);
+    }
+
+    &:nth-child(7) {
+        background-image: linear-gradient(to left , pink 50%, black 50%);
+    }
+
+    &:nth-child(8) {
+        background-image: linear-gradient(to left , white 50%, black 50%);
+    }
+    
+}
+
+.white-view .view-edit {
+    display: inline-grid;
+    place-content: center;
+    width: 50px;
+    height: 55px;
+    border-radius: 50% ;
+
+    &:nth-child(1) {
+        background-image: linear-gradient(to left , red 50%, white 50%);
+    }
+    
+    &:nth-child(2) {
+        background-image: linear-gradient(to left , blue 50%, white 50%);
+    }
+
+    &:nth-child(3) {
+        background-image: linear-gradient(to left , green 50%, white 50%);
+    }
+
+    &:nth-child(4) {
+        background-image: linear-gradient(to left , yellow 50%, white 50%);
+    }
+
+    &:nth-child(5) {
+        background-image: linear-gradient(to left , orange 50%, white 50%);
+    }
+
+    &:nth-child(6) {
+        background-image: linear-gradient(to left , purple 50%, white 50%);
+    }
+
+    &:nth-child(7) {
+        background-image: linear-gradient(to left , pink 50%, white 50%);
+    }
+
+    &:nth-child(8) {
+        background-image: linear-gradient(to left , black 50%, white 50%);
+    }
+    
+}

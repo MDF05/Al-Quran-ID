@@ -15,7 +15,9 @@
 
 
 .play-surah-dava {
-    cursor: pointer;
+    padding: 0;
+    margin : 0;
+    border: 0 solid transparent;
     width: max-content;
     height: max-content;
 }
@@ -24,10 +26,23 @@
     cursor: pointer;
 }
 
-span.more-action button{
-    border-bottom: 1px double grey;
-    border-right: 1px dotted grey;
-    font-size: 15px;
+span.more-action {
+    background : green;
+    width: max-content;
+    height: max-content;
+    padding: 0;
+    margin : 0;
+
+    button.aksi-tambahan-ayat{
+        width: max-content;
+        height: max-content;
+        border: 0px solid transparent;
+        border-bottom: 1px double grey;
+        border-right: 1px dotted grey;
+        font-size: 15px;
+        margin : 0px;
+        padding : 0px;
+    }
 }
 
 .play-audio-template {
@@ -199,9 +214,14 @@ span.more-action button{
     width: 250px;
     height: 100%;
     transition: .5s all cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    overflow: auto;
+    background-color: grey;
 
     .tombol-header-setting {
         background: grey;
+        position : sticky;
+        top: 0;
+        right: 0;
     }
 
     .sub-setting {
@@ -218,8 +238,6 @@ span.more-action button{
 
     .atur-mode-tampilan {
         height: 100%;
-        background-color: white;
-        overflow: auto;
     }
 
 }

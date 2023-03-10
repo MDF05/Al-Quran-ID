@@ -12,11 +12,11 @@
 }
 
 .play-surah-dava {
-  cursor: pointer;
-  width: -webkit-max-content;
+  padding: 0;
+  margin: 0;
+  border: 0 solid transparent;
   width: -moz-max-content;
   width: max-content;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }
@@ -25,10 +25,26 @@
   cursor: pointer;
 }
 
-span.more-action button {
+span.more-action {
+  background: green;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0;
+  margin: 0;
+}
+span.more-action button.aksi-tambahan-ayat {
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border: 0px solid transparent;
   border-bottom: 1px double grey;
   border-right: 1px dotted grey;
   font-size: 15px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .play-audio-template {
@@ -108,7 +124,6 @@ span.more-action button {
 #daftar-surah-nav span.ini-urutan {
   display: inline-flex;
   align-items: center;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   padding: 0 50px;
@@ -130,7 +145,6 @@ span.more-action button {
   font-size: 4em;
   background-color: silver;
   border-radius: 50%;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
@@ -189,9 +203,14 @@ span.more-action button {
   width: 250px;
   height: 100%;
   transition: 0.5s all cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  overflow: auto;
+  background-color: grey;
 }
 #container-pengaturan .tombol-header-setting {
   background: grey;
+  position: sticky;
+  top: 0;
+  right: 0;
 }
 #container-pengaturan .sub-setting {
   cursor: pointer;
@@ -204,8 +223,6 @@ span.more-action button {
 }
 #container-pengaturan .atur-mode-tampilan {
   height: 100%;
-  background-color: white;
-  overflow: auto;
 }
 
 .judul-surah {
@@ -238,4 +255,68 @@ span.more-action button {
   display: none;
   color: #ff0000;
   justify-content: end;
+}
+
+.black-view .view-edit {
+  display: inline-grid;
+  place-content: center;
+  width: 50px;
+  height: 55px;
+  border-radius: 50%;
+}
+.black-view .view-edit:nth-child(1) {
+  background-image: linear-gradient(to left, red 50%, black 50%);
+}
+.black-view .view-edit:nth-child(2) {
+  background-image: linear-gradient(to left, blue 50%, black 50%);
+}
+.black-view .view-edit:nth-child(3) {
+  background-image: linear-gradient(to left, green 50%, black 50%);
+}
+.black-view .view-edit:nth-child(4) {
+  background-image: linear-gradient(to left, yellow 50%, black 50%);
+}
+.black-view .view-edit:nth-child(5) {
+  background-image: linear-gradient(to left, orange 50%, black 50%);
+}
+.black-view .view-edit:nth-child(6) {
+  background-image: linear-gradient(to left, purple 50%, black 50%);
+}
+.black-view .view-edit:nth-child(7) {
+  background-image: linear-gradient(to left, pink 50%, black 50%);
+}
+.black-view .view-edit:nth-child(8) {
+  background-image: linear-gradient(to left, white 50%, black 50%);
+}
+
+.white-view .view-edit {
+  display: inline-grid;
+  place-content: center;
+  width: 50px;
+  height: 55px;
+  border-radius: 50%;
+}
+.white-view .view-edit:nth-child(1) {
+  background-image: linear-gradient(to left, red 50%, white 50%);
+}
+.white-view .view-edit:nth-child(2) {
+  background-image: linear-gradient(to left, blue 50%, white 50%);
+}
+.white-view .view-edit:nth-child(3) {
+  background-image: linear-gradient(to left, green 50%, white 50%);
+}
+.white-view .view-edit:nth-child(4) {
+  background-image: linear-gradient(to left, yellow 50%, white 50%);
+}
+.white-view .view-edit:nth-child(5) {
+  background-image: linear-gradient(to left, orange 50%, white 50%);
+}
+.white-view .view-edit:nth-child(6) {
+  background-image: linear-gradient(to left, purple 50%, white 50%);
+}
+.white-view .view-edit:nth-child(7) {
+  background-image: linear-gradient(to left, pink 50%, white 50%);
+}
+.white-view .view-edit:nth-child(8) {
+  background-image: linear-gradient(to left, black 50%, white 50%);
 }/*# sourceMappingURL=surah.css.map */

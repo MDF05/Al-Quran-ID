@@ -7,7 +7,6 @@
 
 .ol-list-surah li a {
   overflow: hidden;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   transition: all 0.5s ease-in;
@@ -35,8 +34,7 @@ body {
   border: 4.5px solid rgba(0, 0, 0, 0);
   border-radius: 50%;
   border-color: #dbdcef rgba(0, 0, 0, 0);
-  -webkit-animation: spinner-e04l1k 1s infinite linear;
-          animation: spinner-e04l1k 1s infinite linear;
+  animation: spinner-e04l1k 1s infinite linear;
 }
 
 .spinner::before,
@@ -50,21 +48,13 @@ body {
 
 .spinner::before {
   border-color: #474bff rgba(0, 0, 0, 0);
-  -webkit-animation: inherit;
-          animation: inherit;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  animation: inherit;
+  animation-duration: 0.5s;
   animation-direction: reverse;
 }
 
 .spinner::after {
   margin: 8.9px;
-}
-
-@-webkit-keyframes spinner-e04l1k {
-  100% {
-    transform: rotate(1turn);
-  }
 }
 
 @keyframes spinner-e04l1k {
@@ -256,7 +246,6 @@ nav#nav-id .dava-button {
   }
   nav#nav-id .toggler-nav {
     display: inherit;
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     position: static;

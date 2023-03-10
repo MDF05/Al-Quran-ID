@@ -51,7 +51,6 @@ nav#nav-id .dava-button {
   }
   nav#nav-id .toggler-nav {
     display: inherit;
-    width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     position: static;
