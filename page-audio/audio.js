@@ -145,7 +145,7 @@ function pilihAudioSurah() {
       e.dataset.srcaudio = `https://equran.nos.wjv-1.neo.id/audio-full/Misyari-Rasyid-Al-Afasi/${noSurah}.mp3`;
     });
     templateAudio.innerHTML = "";
-    judulAudio.innerHTML = "dengarkan audio surah full";
+    judulAudio.innerHTML = "dengarkan audio surah full saja";
   });
 
   radioSurahAudio[1].addEventListener("input", () => {
