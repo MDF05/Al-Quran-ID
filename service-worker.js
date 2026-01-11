@@ -17,7 +17,7 @@ self.addEventListener("install", (event) => {
         "/page-audio/workerAudio/worker1.js",
         "/page-audio/audio.html",
         "/page-audio/audio.js",
-        "/page-surah/javascriipt/index.js",
+        "/page-surah/javascript/index.js",
         "/page-surah/page.html",
         "/page-surah/surah/surah.html",
         "/page-surah/surah/surah.js",
